@@ -1,109 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .dashboard {
-    background: #ffffff;
-    padding: 20px 25px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 280px;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 280px;
 }
 
-/* Heading */
 .dashboard h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color:#333;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-/* Sensor Cards */
-.sensor-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.sensors {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.sensor-card {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 12px;
-    width: 48%;
-    box-shadow: inset 0px 1px 3px rgba(0,0,0,0.08);
+.sensor {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  width: 45%;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.sensor-card h3 {
-    font-size: 14px;
-    color: #444;
-    margin-bottom: 8px;
+.sensor h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.sensor-value {
-    font-size: 18px;
-    font-weight: bold;
-    color: #007bff;
+.sensor p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007BFF;
 }
 
-/* LED Toggle Switch */
 .led-control {
-    margin-top: 10px;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-.led-control label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-    margin-right: 10px;
-}
-
-/* Toggle switch style */
+/* Toggle Switch */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-top: 10px;
 }
 
 .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 24px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 25px;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
 }
 
-/* Checked state */
-.switch input:checked + .slider {
-    background-color: #4CAF50;
+input:checked + .slider {
+  background-color: #28a745;
 }
 
-.switch input:checked + .slider:before {
-    transform: translateX(26px);
+input:checked + .slider:before {
+  transform: translateX(24px);
 }
